@@ -3,7 +3,7 @@
 // -----------------------------------------------
 // This demo analyzes financial text for potential regulatory red flags
 
-$apiKey = "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"; // Replace with your key
+$apiKey = ""; // Replace with your key
 
 // Sample financial disclosure or complaint text
 $text = "
