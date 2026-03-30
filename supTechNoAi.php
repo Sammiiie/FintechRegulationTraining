@@ -6,12 +6,28 @@
 
 // Sample "complaints" or "social media posts"
 $complaints = [
-    "My loan app keeps calling my family members for repayment!",
-    "Bank debited me twice and didn’t reverse it.",
-    "This fintech app is excellent, easy to use.",
-    "ZedWallet shared my BVN details without my consent!",
-    "Transfer failed but money was deducted from my account!",
-    "The payment platform is down again. Same issue every week!"
+    "I keep receiving spam mails offering products and services which I didn&#39;t
+subscribe to and no option of opt in and out. They gave out my personal details
+without my consent. The unfair term was that the term did not specify what the
+data would be used for.",
+
+    "The facility was granted, and interest rate was increased without consent. Or
+advice of a rate review.",
+
+    "Fees and charges/interest rate were passed to the account, which were not
+disclosed in the offer letter..",
+
+    "I keep receiving spam mails offering products and services which I didn&#39;t
+subscribe to and no option of opt in and out. They gave out my personal details
+without my consent. The unfair term was that the term did not specify what the
+data would be used for.",
+
+    "We have not received any materials for sensitization on the product and services
+we are utilizing with Fintech.",
+
+    "I have been out of the country for the past 7days, and the above listed complaint
+remained unresolved because i am unable to escalate to the regulatory of the
+Fintech."
 ];
 
 // Define risk categories and related keywords
@@ -33,6 +49,16 @@ $riskIndicators = [
     ],
     "system_failure" => [
         "keywords" => ["down", "failed", "error", "unavailable"],
+        "risk_level" => "Medium",
+        "message" => "Systemic or Platform Instability"
+    ],
+    "transactions" => [
+        "keywords" => ["unsolicited loan", "unauthorized transaction", "loan disbursed without consent", "interest rate was increased", "changes in interest rate", "over charging"],
+        "risk_level" => "Medium",
+        "message" => "Systemic or Platform Instability"
+    ],
+    "clear_information" => [
+        "keywords" => ["non-disclosure of applicable charges", "sensitization on the product", "unclear terms", "hidden fees", "misleading", "none inssuance of offer letter", "lack of clear information", "bank not responding"],
         "risk_level" => "Medium",
         "message" => "Systemic or Platform Instability"
     ]
